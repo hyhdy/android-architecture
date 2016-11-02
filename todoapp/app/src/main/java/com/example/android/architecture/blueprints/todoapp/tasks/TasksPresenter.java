@@ -79,6 +79,7 @@ public class TasksPresenter implements TasksContract.Presenter {
         if (showLoadingUI) {
             mTasksView.setLoadingIndicator(true);
         }
+        //强制更新,则不走本地数据,直接取网络数据
         if (forceUpdate) {
             mTasksRepository.refreshTasks();
         }
